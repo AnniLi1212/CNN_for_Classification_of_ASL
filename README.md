@@ -15,6 +15,7 @@ to alphabets. With an input size of 200x200 pixels’ image, the model can achie
 ## File Description:
 
 * **CNN_for_ASL_Classification.ipynb** : Main notebook, include everything. Please just clone and run.
+* **evaluation.ipynb**: For loading the pre-trained model and evaluating, if necessary. 
 
 * **scripts/** : Clean version of scipts.
 
