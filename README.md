@@ -10,6 +10,7 @@ to alphabets. With an input size of 200x200 pixels’ image, the model can achie
   pip install torch torchvision pillow matplotlib numpy scipy pandas scikit-learn mediapipe
   ```
 * Jupyter Notebook
+* Dataset: Please download at https://www.kaggle.com/datasets/grassknoted/asl-alphabet/data
 
 ## File Description:
 
