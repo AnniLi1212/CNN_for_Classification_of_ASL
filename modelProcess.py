@@ -42,6 +42,7 @@ def modelTrain(model,learning_rate,num_epochs,loader_train,loader_val,device):
         
     best_val_acc = 0.0
 
+    train_time_sum=0
     for epoch in range(num_epochs):
         start_time = time.time()
         
@@ -80,6 +81,7 @@ def modelTrain(model,learning_rate,num_epochs,loader_train,loader_val,device):
         
         train_end_time = time.time()
         train_time = train_end_time - start_time
+        train_time_sum+=train_time
         
         print(f'epoch [{epoch+1}/{num_epochs}] - train loss: {loss_train_avg:.2f}, train acc: {acc_train_avg:.2f}, time taken: {train_time:.2f}')
         
@@ -122,4 +124,4 @@ def modelTrain(model,learning_rate,num_epochs,loader_train,loader_val,device):
             print(f'model saved with val acc: {best_val_acc}')
             
     print('training done.')
-    return losses_train, accs_train, losses_val, accs_val
+    return losses_train, accs_train, losses_val, accs_val,train_time_sum
