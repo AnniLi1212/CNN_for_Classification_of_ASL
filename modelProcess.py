@@ -117,7 +117,8 @@ def modelTrain(model,learning_rate,num_epochs,loader_train,loader_val,device):
             best_val_acc = acc_val_avg
             if not os.path.exists('best_models'):
                 os.makedirs('best_models')
-            torch.save(model.state_dict(), 'best_models/best_model_baseline.pth')
+            modelSavePath='best_models/best_model_'+model.__class__.__name__+'.pth'
+            torch.save(model.state_dict(),modelSavePath)
             print(f'model saved with val acc: {best_val_acc}')
             
     print('training done.')
